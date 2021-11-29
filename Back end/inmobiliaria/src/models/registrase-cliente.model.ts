@@ -5,7 +5,7 @@ export class RegistraseCliente extends Entity {
   @property({
     type: 'number',
     id: true,
-    generated: true,
+    generated: false,
   })
   id?: number;
 
@@ -45,7 +45,6 @@ export class RegistraseCliente extends Entity {
   })
   contrasena: string;
 
-
   constructor(data?: Partial<RegistraseCliente>) {
     super(data);
   }
@@ -55,4 +54,5 @@ export interface RegistraseClienteRelations {
   // describe navigational properties here
 }
 
-export type RegistraseClienteWithRelations = RegistraseCliente & RegistraseClienteRelations;
+export type RegistraseClienteWithRelations = RegistraseCliente &
+  RegistraseClienteRelations;
